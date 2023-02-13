@@ -214,4 +214,32 @@ let test37 = 1;
 if (test37 > 0) console.log('+++');else console.log('---');
 //
 if (test37 > 0) console.log('+++');
+//Конструкция else if в JavaScript
+let day = 19
+
+if (day <= 10){
+	console.log('Первая декада')
+} else if (day >= 11 && day <= 20){
+	console.log('Вторая декада')
+} else if (day >= 21 && day <= 31){
+	console.log('Третья декада')
+} else if (day > 31 || day < 0){
+	console.log('Ошибка.Неверное число')
+}
+//Вложенные конструкции if-else в JavaScript
+let number = 55;
+let number2 = number %10; 
+let number1 = (number - number2)/10
+let sum = number1 + number2 
+
+if (number > 99 || number < 0){
+	console.log('Неверное число')
+} else if (sum < 10){
+	console.log('Сумма цифр однозначна')
+} else if (sum > 10){
+	console.log('Сумма цифр Двузначна')
+}
 //
+
+
+
