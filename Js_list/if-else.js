@@ -227,19 +227,285 @@ if (day <= 10){
 	console.log('Ошибка.Неверное число')
 }
 //Вложенные конструкции if-else в JavaScript
-let number = 55;
+let number = 53;
 let number2 = number %10; 
 let number1 = (number - number2)/10
 let sum = number1 + number2 
 
 if (number > 99 || number < 0){
-	console.log('Неверное число')
+	console.log('Неверное число');
 } else if (sum < 10){
-	console.log('Сумма цифр однозначна')
+	console.log('Сумма цифр однозначна');
 } else if (sum > 10){
-	console.log('Сумма цифр Двузначна')
+	console.log('Сумма цифр Двузначна');
+}
+//Конструкция switch-case в JavaScript
+let lang = 'de';
+
+switch (lang){
+	case 'ru':
+		console.log('рус');
+	break;
+	case 'en':
+		console.log('анг');
+	break;
+	case 'de':
+		console.log('нем');
+	break;
+	default:
+		console.log('язык не поддерживается');
+	break;
+}
+//Тернарный оператор в JavaScript
+let numbers = 17;
+let result = numbers >= 0 ? '1' : '2';
+console.log(result);
+
+//Логические операции в JavaScript
+//№1
+let a1 = 2 * (3 - 1);
+let b1 = 6 - 2;
+
+console.log(a1 == b1);
+//№2
+let a2 = 5 * (7 - 4);
+let b2 = 1 + 2 + 7;
+
+console.log(a2 > b2);
+//№3
+let a3 = 2 ** 4;
+let b3 = 4 ** 2;
+
+console.log(a3 != b3);
+//Функция confirm в JavaScript
+// let ok = confirm('Вам есть 18?');
+
+// if (ok) {
+// 	alert('На этой странице есть материал предназначенный строго для взрослых ');
+// } else {
+// 	alert('Доступ к этой странице несовершенно летним запрещен');
+// }
+//Область видимости переменных в if-else в JavaScript
+let age = 17;
+let adult;
+
+if (age >= 18) {
+	adult = true;
+} else {
+	adult = false;
+}
+console.log(adult);
+//Нюансы области видимости переменных в конструкциях if-else в JavaScript
+let ages = 17;
+let adults;
+
+if (ages >= 18) {
+	adults = true;
+} else {
+	adults = false;
+}
+
+console.log(adults);
+//
+let age2 = 17;
+let res2;
+
+if (age2 >= 18) {
+	if (age2 <= 23) {
+		res2 = 'от 18 до 23';
+	} else {
+		res2 = 'больше 23';
+	}
+} else {
+	res2 = 'меньше 18';
+}
+
+console.log(res2);
+//
+let age3 = 19;
+let res3;
+
+if (age3 >= 18) {
+	if (age3 <= 23) {
+		res3 = 'от 18 до 23';
+	} else {
+		res3 = 'больше 23';
+	}
+} else {
+	res3 = 'меньше 18';
+}
+
+console.log(res3);
+//Проверка частей часа через if-else в JavaScript
+let min = 50;
+
+if (min >= 0 && min <= 19) {
+	console.log('1 треть');
+}
+
+if (min >= 20 && min <= 39) {
+	console.log('2 треть');
+}
+
+if (min >= 40 && min <= 59) {
+	console.log('3 треть');
+}
+//Проверка длины строк и массивов в JavaScript
+let arra = [4 , 5 , 7 ];
+
+if (arra.length == 3){
+	console.log(arra[0] + arra[1] + arra[2])
+} else {
+	console.log('В массиве больше или меньше 3 элементов')
+}
+//Проверка символов строки в JavaScript
+//1
+let str1 = 'avcsd';
+
+if (str1[0] == 'a') {
+	console.log('Строка начинается с символа "a"');
+}
+//2
+let str2 = 'avcsx';
+
+if (str2[str2.length - 1] == 'x') {
+	console.log('Строка заканчивается символом "x"');
+}
+//3
+let str3 = 'avcsd';
+
+if (str3[0] == 'a' || str3[0] == 'b') {
+	console.log('Строка начинается с символа "a" или "b"');
+}
+//Проверка цифр числа в JavaScript
+let numbs = 12340;
+let last = String(numbs);
+
+if (last[last.length - 1] == 0){
+	console.log('+++');
+} else {
+	console.log('---');
 }
 //
+let numbs2 = 12144
+let last2 =	String(numbs2);
 
+if (last2[last.length - 1] % 2 == 0){
+	console.log("Число чётное");
+} else {
+	console.log("Число нечётное");
+}
+//Проверка остатка от деления в JavaScript
+let a = 9;
+let b = 2;
+let rest = a % b;
 
+if (rest === 0) {
+	console.log('делится нацело');
+} else {
+	console.log('делится с остатком ' + rest);
+}
+//
+let a11 = 9;
+let b22 = 3;
+let rest33 = a11 % b22;
 
+if (rest33 === 0) {
+	console.log('делится нацело');
+} else {
+	console.log('делится с остатком ' + rest33);
+}
+//Поиск ошибок в коде с условиями JavaScript
+let numb1 = 1;
+let numb2 = 2;
+
+if (numb1 + numb2 === 3) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+//
+let nums1 = '1';
+let nums2 = '2';
+
+if (Number(nums1) + Number(nums2) === 3) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+//
+let numbers1 = 123;
+
+if (String(numbers1)[0] == 1) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+//
+let numbm = 123;
+let first = String(numbm)[0];
+
+if (first == 1) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+//
+let numbms = 12;
+
+if (String(numbms).length === 2) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+//
+let numb = '123033'; 
+
+let sum1 = Number(numb[0]) + Number(numb[1]) + Number(numb[2]);
+let sum2 = Number(numb[3]) + Number(numb[4]) + Number(numb[5]);
+if (sum1 == sum2) {
+	console.log('суммы равны');
+} else {
+	console.log('суммы не равны');
+}
+//Практика на условия if-else в JavaScrip
+let month = 11;
+
+if (month <= 2 || month == 12){
+	console.log('Зима');
+} else if (month >= 3 && !(month > 5)){
+	console.log('Весна');
+} else if (month >= 6 && !(month > 8)){
+	console.log('Лето');
+} else if (month >= 9 && !(month > 11)){
+	console.log('Осень');
+}
+//
+let strr = 'abcde';
+
+if (strr[0] == 'a'){
+	console.log('Первый символ это "a"')
+} else {
+	console.log('Первый символ не "a"')
+}
+//
+let chislo = 12345;
+
+if (String(chislo)[0] < 0 || !(String(chislo)[0] >= 3)){
+	console.log('первым символом этого числа является цифра 1, 2 или 3')
+}
+//
+let thre = 452;
+let sumb = Number(String(thre)[0]) + Number(String(thre)[1]) + Number(String(thre)[2]);
+console.log(sumb)
+//
+let shest = '452263'; 
+
+let summa1 = Number(shest[0]) + Number(shest[1]) + Number(shest[2]);
+let summa2 = Number(shest[3]) + Number(shest[4]) + Number(shest[5]);
+if (summa1 == summa2) {
+	console.log('суммы равны');
+} else {
+	console.log('суммы не равны');
+}
+//
