@@ -42,7 +42,7 @@ console.log(keys);
 //
 let obj8 = {x: 1, y: 2, z: 3};
 let keys1 = Object.keys(obj8);
-console.log(Object.keys(obj8).length);
+console.log(keys1.length);
 //
 let obj9 = {x: 1, y: 2, z: 3};
 let key2 = 'y'
