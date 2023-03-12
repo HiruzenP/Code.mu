@@ -83,3 +83,62 @@ if (str.indexOf('http://') == 0){
 }else{
     console.log('Строка не начинается с этого ')
 }
+//Работа с startsWith, endsWith
+str1 = 'http://code.mu/ru/javascript/book/prime/inbuilt/string/.html'
+console.log(str1.startsWith('http://'));
+console.log(str1.endsWith('.html'))
+//
+str2 = '1-2-3-4-5';
+arr2 = str2.split('-');
+console.log(arr2)
+//
+str3 = '12345';
+arr3 = str3.split('')
+console.log(arr3)
+//Метод join
+arr4 = [1,2,3,4,5];
+str4 = arr4.join('-');
+
+console.log(str4);
+//Работа с push, unshift
+arr5 = [1, 2, 3];
+arr5.push(4,5,6)
+console.log(arr5)
+//
+arr6 = [1, 2, 3];
+arr6.unshift(4,5,6)
+console.log(arr6)
+//
+arr7 = [1,2,3,4,5];
+newarr7 = arr7.slice(0,3)
+console.log(newarr7)
+//
+arr8 = [1,2,3,4,5];
+newarr8 = arr8.slice(3,5)
+console.log(newarr8)
+//Работа с splice
+arr9 = [1,2,3,4,5];
+arr9.splice(1,2)
+console.log(arr9)
+//
+arr10 = [1,2,3,4,5];
+arr10.splice(3,0,'a', 'b', 'c')
+console.log(arr10)
+//
+arr11 = [1,2,3,4,5];
+arr11.splice(1,0,'a', 'b')
+arr11.splice(arr11.indexOf(4)+1,0, 'c');
+arr11.splice(arr11.indexOf(5)+1,0, 'e');
+console.log(arr11)
+//
+arr12 = [1,2,3,4,5]
+pos = arr12.indexOf(3);
+console.log(pos)
+//
+str = 'london';
+console.log(str.slice(0,5)+str.slice(5).toUpperCase())
+//
+console.log(str.slice(0,2).toUpperCase()+str.slice(2))
+//
+str = 'London'
+console.log(str.slice(0,1).toLowerCase()+str.slice(1))
